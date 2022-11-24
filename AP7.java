@@ -10,13 +10,13 @@ class AP7{
 		System.out.println(rev);
 	}
 	public static String reverseSentence(String str){  
-    String[] words=str.split("\\s");  
-    String reverseWord="";  
-    for(String w:words){  
-        StringBuilder sb=new StringBuilder(w);  
-        sb.reverse();  
-        reverseWord+=sb.toString()+" ";  
-    }  
-    return reverseWord.trim();  
-}  
+   	 	String[] words=str.split("\\s");  
+    	 	String reverseWord="";  
+    	 	for(String w:words){  
+        	    StringBuilder sb=new StringBuilder(w);  
+        	    sb.reverse();  
+        	    reverseWord+=sb.toString()+" ";  
+    		}  
+    		return reverseWord.trim();  
+	}  
 }
