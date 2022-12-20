@@ -6,6 +6,10 @@ public class AP1b {
         x.sum(args);
 
     }
+
+    class abc{
+        final static int a = 4;
+    }
 }
 
 class test{
