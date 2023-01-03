@@ -1,8 +1,8 @@
-package ContantVariables;
+package ConstantVariable;
 
 import java.util.HashMap;
 
-public class CVars {
+public class ConstantVariables {
     private HashMap<String, Double> variables = new HashMap<String, Double>();
     public CVars() {
         variables.put("E", Math.exp(1));
