@@ -1,5 +1,3 @@
-import java.util.*;
-import java.io.*;
 class bp4{
     public static void main(String[] args){
         char[][] ch = {{'A','B','A','C','C','D','E','A','D'},{'D','B','A','C','C','D','E','A','D'}

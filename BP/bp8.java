@@ -1,6 +1,3 @@
-import java.util.*;
-import java.io.*;
-
 public class bp8 {
     public static void main(String[] args) {
         String test1 = "abcdef";

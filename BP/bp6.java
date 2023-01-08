@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 class bp6{
     public static void main(String[] args){
         Arrays.sort(args);

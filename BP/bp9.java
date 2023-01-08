@@ -1,5 +1,4 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
 public class bp9 {
     public static void main(String[] args)
     {   

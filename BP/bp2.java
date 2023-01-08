@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 public class duplicateFinder //change the file name or class name to run this code 
 {
 public static void main(String[] args){

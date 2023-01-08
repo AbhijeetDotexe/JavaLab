@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 public class bp3
 {
     public static char[] filterVowel(char[] na){

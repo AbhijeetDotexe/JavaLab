@@ -1,6 +1,3 @@
-import java.util.*;
-import java.io.*;
-
 class Waffle {
     private String flavor;
     private float price;
