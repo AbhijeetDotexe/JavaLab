@@ -1,0 +1,59 @@
+CREATE TABLE Accounts (
+    Acc_No NUMBER(4) PRIMARY KEY,
+    CustomerName VARCHAR2(20),
+    Balance NUMBER(10));
+
+INSERT INTO Accounts VALUES(2312, 'Abhijeet Rana', 100000);
+INSERT INTO Accounts VALUES(9142, 'Karan', 200000);
+INSERT INTO Accounts VALUES(8352, 'Ankit', 500000);
+INSERT INTO Accounts VALUES(6272, 'Romil', 300000);
+INSERT INTO Accounts VALUES(6273, 'Oneeb', 400000);
+INSERT INTO Accounts VALUES(4132, 'Riyansh',700000);
+INSERT INTO Accounts VALUES(6274, 'Sandeep', 900000);
+INSERT INTO Accounts VALUES(6276, 'Sachin', 900000);
+INSERT INTO Accounts VALUES(8277, 'Aman', 800000);
+INSERT INTO Accounts VALUES(5278, 'Mudit', 600000);
+
+select * from accounts;
+DECLARE
+    V_Sum NUMBER(10) := 0;
+BEGIN
+    UPDATE Accounts
+    SET Accounts.Balance = Accounts.Balance - 1500; UPDATE Accounts
+    SET Accounts.Balance = Accounts.Balance + 50000; SELECT SUM(Accounts.Balance) INTO V_Sum FROM Accounts;
+    IF(V_Sum > 6000000) THEN
+    UPDATE Accounts
+    SET Accounts.Balance = Accounts.Balance - 50000;END IF;
+END;
+
+select * from accounts;
+
+
+INSERT INTO employees VALUES (1, 'Abhijeet', 'Rana', 'johndoeexample.com', '01-01-2022', 50000);
+INSERT INTO employees VALUES (2,'Karan', 'Rawat', 'Karandotexample.com', '03-01-2022', 60000);
+INSERT INTO employees VALUES (3, 'Romil', 'yadav', 'Romildotexample.com', '04-01-2022', 70000);
+INSERT INTO employees VALUES (4, 'Mudit', 'Singh', 'Muditdotexample.com', '01-01-2022', 80000);
+
+CREATE OR REPLACE PROCEDURE update_employee (p_employee_id IN NUMBER, p_first_name IN VARCHAR2, p_last_name IN VARCHAR2)
+AS
+BEGIN
+   UPDATE employees
+   SET first_name = p_first_name, last_name = p_last_name
+   WHERE employee_id = p_employee_id;
+END;
+
+
+CREATE OR REPLACE FUNCTION get_employee_name (p_employee_id IN NUMBER)
+RETURN VARCHAR2
+AS
+   v_first_name VARCHAR2(50);
+   v_last_name VARCHAR2(50);
+BEGIN
+   SELECT first_name, last_name
+   INTO v_first_name, v_last_name
+   FROM employees
+   WHERE employee_id = p_employee_id;
+
+   RETURN v_first_name || ' ' || v_last_name;
+END;
+

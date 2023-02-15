@@ -24,11 +24,11 @@ class bp1{
         System.out.print("the fastest runner is ");
         int min = min(arr,arr.length);
         System.out.print(na[min]);
-        System.out.println(" " + arr[min]);
+        System.out.println(" and his speed is " + arr[min]);
 
         System.out.print("the second fastest runnner is ");
         int smin = smin(arr,arr.length,min);
         System.out.print(na[smin]);
-        System.out.println(" " + arr[smin]);
+        System.out.println(" and his speed is " + arr[smin]);
 }
 }
